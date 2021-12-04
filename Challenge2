@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "Enter region in which you want to search for instance:"
+read region
+echo "Enter the instance id"
+read instance_id
+echo "Enter the query"
+read query 
+aws ec2 describe-instances --region $region --instance-ids $instance_id --query $query --output json
