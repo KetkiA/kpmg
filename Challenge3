@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class MyClass {
+    public static void main(String args[]) {
+      System.out.println(getvalue("a/b/c"));
+    }
+    
+    public static String getvalue(final String key) {
+        Map<String,String> innermostMap = new HashMap<>() {{
+            put("c","d");
+        }};
+        Map<String,Map<String,String>> innerMap = new HashMap<>() {{
+            put("b",innermostMap);
+        }};
+        Map<String,Map<String,Map<String, String>>> outerMap = new HashMap<>() {{
+            put("a",innerMap);
+        }};
+        
+        String[] keys = key.split("/");
+        return outerMap.get(keys[0]).get(keys[1]).get(keys[2]);
+    }
+}
