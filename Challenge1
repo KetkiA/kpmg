@@ -1,0 +1,5 @@
+The three tier approach which I would go ahead would be with Docker, and Docker Swarm for Orchestration.
+
+https://mundanecode.com/posts/three-tier-architecture-in-docker/
+
+https://github.com/mundanecode/docker-frontend-backend-db
