@@ -1,0 +1,6 @@
+Enter region in which you want to search for instance
+us-east
+Enter the instance id
+i-2ace470089c2
+Enter the query
+Reservations[*].Instances[*].PublicIpAddress
